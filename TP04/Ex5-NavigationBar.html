@@ -10,8 +10,8 @@
         .container {
             display: flex;
             justify-content: space-between;
-            align-items: center;
-            background-color:#3d3d3d;
+/*             align-items: center; */
+/*             background-color:#3d3d3d; */
             border: 2px solid black;
             padding: 1rem 1.5rem;
         }
@@ -30,7 +30,7 @@
             display: block;
             text-align: center;
             text-emphasis: none;
-            background-color: aquamarine;
+/*             background-color: aquamarine; */
             font-size: x-large;
             color: blue;
         }
@@ -75,12 +75,13 @@
             .nav-menu {
                 position: fixed;
                 top: -100%;
-                left: 5rem;
+                left: 20px;
+                margin-top: 100px;
+                margin-left: -225px;
                 flex-direction: column;
-                background-color: #3d3d3d;
-                width: 100%;
-                padding-top: 20px;
-                padding-bottom: 20px;
+/*                 background-color: #3d3d3d; */
+                width: 80%;
+                padding: 20px;
                 text-align: center;
                 transition: 0.3s;
 
@@ -93,7 +94,7 @@
             }
 
             .nav-item {
-                margin: 2.5rem 0;
+                margin: 1rem 0;
 
             }
 
@@ -103,17 +104,19 @@
             }
 
             .subcontainer.active .bar:nth-child(2) {
-                opacity: 0;
+/*                 opacity: 0; */
+                -webkit-transform: translateY(8px) rotate(90deg);
+                transform: translateY(8px) rotate(90deg);
             }
 
             .subcontainer.active .bar:nth-child(1) {
-                -webkit-transform: translateY(8px) rotate(45deg);
-                transform: translateY(8px) rotate(45deg);
+                -webkit-transform: translateY(8px) rotate(-90deg);
+                transform: translateX(8px) translateY(15px) rotate(90deg);
             }
 
             .subcontainer.active .bar:nth-child(3) {
-                -webkit-transform: translateY(-8px) rotate(-45deg);
-                transform: translateY(-8px) rotate(-45deg);
+                -webkit-transform: translateY(-8px) rotate(90deg);
+                transform: translateY(-8px) rotate(90deg);
             }
         }
     </style>
